@@ -1,0 +1,363 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.2) (preloaded format=pdflatex 2021.4.25)  14 MAY 2021 02:26
+entering extended mode
+**./DMCW2.tex
+(DMCW2.tex
+LaTeX2e <2020-10-01> patch level 4
+L3 programming layer <2021-02-18> xparse <2020-03-03>
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/base\article.cls
+Document Class: article 2020/04/10 v1.4m Standard LaTeX document class
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/base\size12.clo
+File: size12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+)
+\c@part=\count179
+\c@section=\count180
+\c@subsection=\count181
+\c@subsubsection=\count182
+\c@paragraph=\count183
+\c@subparagraph=\count184
+\c@figure=\count185
+\c@table=\count186
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/preprint\fullpage.
+sty
+Package: fullpage 1999/02/23 1.1 (PWD)
+\FP@margin=\skip49
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.
+sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graph
+ics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdfte
+x.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/natbib\natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip50
+\bibsep=\skip51
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count187
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/setspace\setspace.
+sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+) (C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/url\url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsmath.st
+y
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amstext.st
+y
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen139
+))
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen140
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count188
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count189
+\leftroot@=\count190
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count191
+\DOTSCASE@=\count192
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen141
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count193
+\c@MaxMatrixCols=\count194
+\dotsspace@=\muskip17
+\c@parentequation=\count195
+\dspbrk@lvl=\count196
+\tag@help=\toks16
+\row@=\count197
+\column@=\count198
+\maxfields@=\count199
+\andhelp@=\toks17
+\eqnshift@=\dimen142
+\alignsep@=\dimen143
+\tagshift@=\dimen144
+\tagwidth@=\dimen145
+\totwidth@=\dimen146
+\lineht@=\dimen147
+\@envbody=\toks18
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mathtool
+s.sty
+Package: mathtools 2021/04/12 v1.27 mathematical typesetting tools
+
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.st
+y
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/latex-tools\calc.s
+ty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count266
+\calc@Bcount=\count267
+\calc@Adimen=\dimen148
+\calc@Bdimen=\dimen149
+\calc@Askip=\skip55
+\calc@Bskip=\skip56
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count268
+\calc@Cskip=\skip57
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/mathtools\mhsetup.
+sty
+Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
+)
+LaTeX Info: Thecontrolsequence`\('isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\)'isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\['isalreadyrobust on input line 130.
+LaTeX Info: Thecontrolsequence`\]'isalreadyrobust on input line 130.
+\g_MT_multlinerow_int=\count269
+\l_MT_multwidth_dim=\dimen150
+\origjot=\skip58
+\l_MT_shortvdotswithinadjustabove_dim=\dimen151
+\l_MT_shortvdotswithinadjustbelow_dim=\dimen152
+\l_MT_above_intertext_sep=\dimen153
+\l_MT_below_intertext_sep=\dimen154
+\l_MT_above_shortintertext_sep=\dimen155
+\l_MT_below_shortintertext_sep=\dimen156
+\xmathstrut@box=\box49
+\xmathstrut@dim=\dimen157
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/l3backend\l3backen
+d-pdftex.def
+File: l3backend-pdftex.def 2021-02-18 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count270
+\l__pdf_internal_box=\box50
+) (DMCW2.aux)
+\openout1 = `DMCW2.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 15.
+LaTeX Font Info:    ... okay on input line 15.
+
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-p
+df.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count271
+\scratchdimen=\dimen158
+\scratchbox=\box51
+\nofMPsegments=\count272
+\nofMParguments=\count273
+\everyMPshowfont=\toks21
+\MPscratchCnt=\count274
+\MPscratchDim=\dimen159
+\MPnumerator=\count275
+\makeMPintoPDFobject=\count276
+\everyMPtoPDFconversion=\toks22
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epsto
+pdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+)
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.
+sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen160
+\Gin@req@width=\dimen161
+) [1
+
+{C:/Users/Waqar Ayub/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
+<MissingValues.png, id=10, 394.47375pt x 269.50688pt>
+File: MissingValues.png Graphic file (type png)
+<use MissingValues.png>
+Package pdftex.def Info: MissingValues.png  used on input line 35.
+(pdftex.def)             Requested size: 394.47278pt x 269.50621pt.
+
+Overfull \hbox (1.6633pt too wide) in paragraph at lines 48--48
+[]$\OML/cmm/m/it/12 home[]ownership$| 
+ []
+
+
+Overfull \hbox (15.68907pt too wide) in paragraph at lines 57--57
+[]$\OML/cmm/m/it/12 verification[]status$| 
+ []
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[2] [3 <./MissingValues.png>]
+<dates.png, id=20, 378.66469pt x 89.58469pt>
+File: dates.png Graphic file (type png)
+<use dates.png>
+Package pdftex.def Info: dates.png  used on input line 70.
+(pdftex.def)             Requested size: 378.66376pt x 89.58446pt.
+<GeneralBoosting.png, id=21, 487.8225pt x 208.52907pt>
+File: GeneralBoosting.png Graphic file (type png)
+<use GeneralBoosting.png>
+Package pdftex.def Info: GeneralBoosting.png  used on input line 81.
+(pdftex.def)             Requested size: 487.8213pt x 208.52855pt.
+
+Overfull \hbox (18.06628pt too wide) in paragraph at lines 81--82
+ [][] 
+ []
+
+[4 <./dates.png>]
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 93.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 93.
+
+<Adaboost.png, id=28, 460.72125pt x 232.61906pt>
+File: Adaboost.png Graphic file (type png)
+<use Adaboost.png>
+Package pdftex.def Info: Adaboost.png  used on input line 98.
+(pdftex.def)             Requested size: 460.72012pt x 232.61848pt.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+04.
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/base\omscmr.fd
+File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 104.
+<pseudoLoss.png, id=29, 246.9225pt x 44.41594pt>
+File: pseudoLoss.png Graphic file (type png)
+<use pseudoLoss.png>
+Package pdftex.def Info: pseudoLoss.png  used on input line 107.
+(pdftex.def)             Requested size: 246.92188pt x 44.41582pt.
+
+[5 <./GeneralBoosting.png>] [6 <./Adaboost.png>] [7 <./pseudoLoss.png>]
+<bagging.png, id=47, 315.42844pt x 137.7647pt>
+File: bagging.png Graphic file (type png)
+<use bagging.png>
+Package pdftex.def Info: bagging.png  used on input line 120.
+(pdftex.def)             Requested size: 315.42766pt x 137.76434pt.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 124.
+
+<baggingClassification.png, id=48, 143.03438pt x 97.11281pt>
+File: baggingClassification.png Graphic file (type png)
+<use baggingClassification.png>
+Package pdftex.def Info: baggingClassification.png  used on input line 127.
+(pdftex.def)             Requested size: 143.03401pt x 97.11256pt.
+<baggingRegression.png, id=49, 168.63pt x 74.52844pt>
+File: baggingRegression.png Graphic file (type png)
+<use baggingRegression.png>
+Package pdftex.def Info: baggingRegression.png  used on input line 128.
+(pdftex.def)             Requested size: 168.62958pt x 74.52824pt.
+[8 <./bagging.png>]
+<stacking.png, id=55, 367.3725pt x 232.61906pt>
+File: stacking.png Graphic file (type png)
+<use stacking.png>
+Package pdftex.def Info: stacking.png  used on input line 137.
+(pdftex.def)             Requested size: 367.37158pt x 232.61848pt.
+
+
+LaTeX Warning: Command \textellipsis invalid in math mode on input line 141.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9 <./baggingClassification.png> <./baggingRegression.png>]
+<issues.png, id=61, 206.27063pt x 126.4725pt>
+File: issues.png Graphic file (type png)
+<use issues.png>
+Package pdftex.def Info: issues.png  used on input line 152.
+(pdftex.def)             Requested size: 206.27011pt x 126.47218pt.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 156.
+
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+56.
+(C:\Users\Waqar Ayub\AppData\Local\Programs\MiKTeX\tex/latex/base\omlcmr.fd
+File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 156.
+
+
+LaTeX Warning: Command \textless invalid in math mode on input line 156.
+
+[10 <./stacking.png>] [11 <./issues.png>] [12] (DMCW2.bbl [13]) [14] (DMCW2.aux
+) ) 
+Here is how much of TeX's memory you used:
+ 3023 strings out of 479334
+ 45468 string characters out of 2854671
+ 343873 words of memory out of 3000000
+ 20448 multiletter control sequences out of 15000+200000
+ 411716 words of font info for 55 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 67i,15n,74p,1862b,238s stack positions out of 5000i,500n,10000p,200000b,50000s
+ <C:\Users\Waqar Ayub\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\tcrm1200.pk><C:/Users/Waqar Ayub/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmbx10.pfb><C:/Users/Waqar Ayub/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Waqar Ayub/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/Waqar Ayub/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/
+Waqar Ayub/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.p
+fb><C:/Users/Waqar Ayub/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmr10.pfb><C:/Users/Waqar Ayub/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/Users/Waqar Ayub/AppData/Local/Programs/MiKTeX
+/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Waqar Ayub/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/Waqar Ayub/AppD
+ata/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/W
+aqar Ayub/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pf
+b><C:/Users/Waqar Ayub/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
+s/cm/cmti12.pfb>
+Output written on DMCW2.pdf (14 pages, 426471 bytes).
+PDF statistics:
+ 122 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+
