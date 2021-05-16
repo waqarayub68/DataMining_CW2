@@ -1,50 +1,48 @@
 This is BibTeX, Version 0.99d
 Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
-The top-level auxiliary file: Ensemble.aux
+The top-level auxiliary file: DMCW2.aux
 Reallocating 'name_of_file' (item size: 1) to 5 items.
 The style file: agsm.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
 Database file #1: document.bib
-Warning--empty publisher in james04
-You've used 11 entries,
+You've used 5 entries,
             2909 wiz_defined-function locations,
-            706 strings with 6211 characters,
-and the built_in function-call counts, 31196 in all, are:
-= -- 4892
-> -- 448
-< -- 3
-+ -- 2202
-- -- 133
-* -- 2547
-:= -- 6496
-add.period$ -- 11
-call.type$ -- 11
-change.case$ -- 150
-chr.to.int$ -- 11
-cite$ -- 12
-duplicate$ -- 205
-empty$ -- 398
-format.name$ -- 171
-if$ -- 5613
+            671 strings with 5426 characters,
+and the built_in function-call counts, 13674 in all, are:
+= -- 2105
+> -- 212
+< -- 2
++ -- 927
+- -- 63
+* -- 1092
+:= -- 2848
+add.period$ -- 5
+call.type$ -- 5
+change.case$ -- 69
+chr.to.int$ -- 5
+cite$ -- 5
+duplicate$ -- 109
+empty$ -- 207
+format.name$ -- 75
+if$ -- 2483
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 15
-newline$ -- 36
-num.names$ -- 112
-pop$ -- 65
+missing$ -- 6
+newline$ -- 18
+num.names$ -- 52
+pop$ -- 29
 preamble$ -- 1
-purify$ -- 165
+purify$ -- 75
 quote$ -- 0
-skip$ -- 166
+skip$ -- 99
 stack$ -- 0
-substring$ -- 6692
-swap$ -- 48
-text.length$ -- 157
+substring$ -- 2862
+swap$ -- 35
+text.length$ -- 72
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
-warning$ -- 1
-while$ -- 248
+type$ -- 18
+warning$ -- 0
+while$ -- 116
 width$ -- 0
-write$ -- 146
-(There was 1 warning)
+write$ -- 74

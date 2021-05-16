@@ -4,20 +4,11 @@
 Breiman, L.  \harvardyearleft 1996\harvardyearright , `Bagging predictors',
   {\em Machine learning} {\bf 24}(2),~123--140.
 
-\harvarditem{Dietterich}{1997}{dietterich1997machine}
-Dietterich, T.~G.  \harvardyearleft 1997\harvardyearright , `Machine-learning
-  research', {\em AI magazine} {\bf 18}(4),~97--97.
-
 \harvarditem[Freund et~al.]{Freund, Schapire
   et~al.}{1996}{freund1996experiments}
 Freund, Y., Schapire, R.~E. et~al.  \harvardyearleft 1996\harvardyearright ,
   Experiments with a new boosting algorithm, {\em in} `icml', Vol.~96,
   Citeseer, pp.~148--156.
-
-\harvarditem{Hansen \harvardand\ Salamon}{1990}{hansen1990neural}
-Hansen, L.~K. \harvardand\ Salamon, P.  \harvardyearleft 1990\harvardyearright
-  , `Neural network ensembles', {\em IEEE transactions on pattern analysis and
-  machine intelligence} {\bf 12}(10),~993--1001.
 
 \harvarditem[Huang et~al.]{Huang, Xie \harvardand\
   Xiao}{2009}{huang2009research}
@@ -25,25 +16,6 @@ Huang, F., Xie, G. \harvardand\ Xiao, R.  \harvardyearleft
   2009\harvardyearright , Research on ensemble learning, {\em in} `2009
   International Conference on Artificial Intelligence and Computational
   Intelligence', Vol.~3, IEEE, pp.~249--252.
-
-\harvarditem{Kittler \harvardand\ Roli}{2003}{kittler2003multiple}
-Kittler, J. \harvardand\ Roli, F.  \harvardyearleft 2003\harvardyearright ,
-  {\em Multiple Classifier Systems: First International Workshop, MCS 2000
-  Cagliari, Italy, June 21-23, 2000 Proceedings}, Springer.
-
-\harvarditem{Oza \harvardand\ Tumer}{2008}{oza2008classifier}
-Oza, N.~C. \harvardand\ Tumer, K.  \harvardyearleft 2008\harvardyearright ,
-  `Classifier ensembles: Select real-world applications', {\em Information
-  fusion} {\bf 9}(1),~4--20.
-
-\harvarditem{Surowiecki}{2004}{james04}
-Surowiecki, J.~M.  \harvardyearleft 2004\harvardyearright , {\em The Wisdom of
-  Crowds: Why the Many Are Smarter than theFew and How Collective Wisdom Shapes
-  Business, Economies, Societies and Nations,}.
-
-\harvarditem{Tukey et~al.}{1977}{tukey1977}
-Tukey, J.~W. et~al.  \harvardyearleft 1977\harvardyearright , {\em Exploratory
-  data analysis}, Vol.~2, Reading.
 
 \harvarditem{Wang}{2008}{wang2008some}
 Wang, W.  \harvardyearleft 2008\harvardyearright , Some fundamental issues in

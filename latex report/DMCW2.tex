@@ -7,7 +7,7 @@
 \usepackage{url}
 \usepackage{amsmath}
 \usepackage{mathtools}
-
+\renewcommand{\thesubsubsection}{\thesubsection.\alph{subsubsection}}
 
 \title{Supervised and Unsupervised Learning on Lending Club Data}
 \author{Muhammad Waqar Ayub Khan, UEA ID. 100334069}
@@ -72,92 +72,53 @@ After dropping these features we have a data with 91 features out of 91 14 featu
 	\label{fig:dates}
 \end{figure}
 
-\section{Methods used for Ensemble Learning}
-
-\subsection{Boosting}
-According to \citep{freund1996experiments} and \citep{zhou2012ensemble}, in boosting, a series of algorithms is used to transform poor learners to strong learners, as the weak learner performs better than a random assumption, and the strong learner performs near to ideal overall output. \citep{zhou2012ensemble} describes the boosting with a simple example which is as follows: Consider we have got dataset X which is composed of $x_1$, $x_2$, $x_3$ each take $1/3$ distribution space, and we have got a learner operating in random guess has the 50\% errors rate. We want to get more accurate results, but after applying weak learners we only manage to get the correct result in $x_1$ and $x_2$ and has a $1/3$ error rate and let us say the result of this classifier is $h_1$. Boosting works through enhancing the mistakes of preceding learners results in our case, it is $h_1$. Now we must distribute a new space $d'$ from $d$. In this new space, the learner will give more attention to $x_3$ as it was categorized incorrectly in the first strive at the same time as producing $h_2$. The $h_2$ correctly classify the $x_1$ and $x_3$ and incorrectly classify the $x_2$. So the combined classifier will successfully classify the $x_1$ and bring mistakes for the $x_2$ and $x_3$. Again we calculate new space from $d'$ to $d''$ and bypass this $d''$ space to the learner which generates $h_3$ so $h_3$ correctly classifies the $x_2$ and $x_3$ and incorrectly classifies the $x_1$. Now by way of combining $h_1$, $h_2$, and $h_3$ we have got a more accurate combined classifier, in view that in each space at least two classifiers make accurate predictions. Figure \ref{fig:GeneralBoosting} taken from \citep{zhou2012ensemble} gives the general idea of boosting. 
-               \begin{figure}[h!]
-               	\centering
-               	\includegraphics{GeneralBoosting.png}
-               	\caption{General Boosting Flow ~\citep{zhou2012ensemble}}
-               	\label{fig:GeneralBoosting}
-               \end{figure}
-               In general boosting explanation, the space transformation (Calculating the dataset for next leaner), and combining methods are not described clearly. The new boosting technique by \citep{freund1996experiments} has stated these two elements in-depth and that method is referred to as Adaboost.
-               
-               
-{\bf{Adaboost}}
-
-\citep{freund1996experiments} expressed that Adaboost accepts input of training dataset which can be of m length such as:
-	\begin{align*}
-		S = ((x_1, y_1), (x_2, y_2) ….. (x_m, y_m) ~\citep{freund1996experiments}
-	\end{align*}
-
-Where the $x_i$ = set of features in the training dataset and $y_i$ = class labels and pass this dataset to the weak learners of the ensemble which will give $h_t$: $X\,\to\,Y$, where $h_t$ = the hypothesis of the weak learner, this hypothesis should be with the minimum error i-e \\ $(\epsilon_t = Pr_{i \sim D_t}[h_t(x_i)\neq  y_i])~\citep{freund1996experiments}$. This process will be repeated till T times on each iteration error will be calculated and a new dataset for the next round will be generated. Figure \ref{fig:Adaboost} shows the algorithm for the AdaBoost which is taken from \citep{freund1996experiments}. 
+\section{Classification}
+In classification the task is to identify the status of the loan whether a loan is a good loan or a bad loan. In the actual data we have seven different status of the loan e-g $fully\_paid$, $Current$, $charged\_off$, $late\_15\_30\_days$, $late\_30\_120\_days$, , $grace\_period$, , $default$. Status like $charged\_off$, $late\_15\_30\_days$, $late\_30\_120\_days$, , $grace\_period$, , $default$ represent the bad loan so these statuses converted into the 1 class which is named as $bad\_loan$. Now our classification problem is converted into three class classification problem $fully\_paid$ which is a good loan, $bad\_loan$ which represents the loans which are bad investments by thee banks and $Current$ loans which are still under observations. Figure \ref{fig:classes} shows the statuses of the loans in the dataset.
 \begin{figure}[h!]
 	\centering
-	\includegraphics{Adaboost.png}
-	\caption{Adaboost Algoritm ~\citep{freund1996experiments}}
-	\label{fig:Adaboost}
+	\includegraphics{classes.png}
+	\caption{Loan Status Classes}
+	\label{fig:classes}
 \end{figure}
-In figure \ref{fig:Adaboost} two unspecified concepts can be seen(1) how $D_t$ is computed (2) how $h_fin$ is computed. Every boosting technique has its way to tackle these concepts. There are various versions of Adaboost, yet in this report Adaboost.M1 and Adaboost.M2 will be examined. In Adaboost.M1 the initial distribution $D_i$ is set to $1/m$ and $D_{i+1}$ is calculated from $D_i$. For $D_{i+1}$ we have to multiply the weight of $i$ with $ \beta_t $(Which is shown in figure \ref{fig:Adaboost}) if $h_t$ classifies $x_i$ correctly else weight remains the same. The weights are renormalized by dividing with Z$_t$(Normalization Constant). In short in Adaboost $x_i$ which is incorrectly classified in the previous classier will gain weight and $x_i$ which are classified correctly in the previous classifier will lose weight because of this in the next classifier there are chances $x_i$ which was incorrectly classified will be selected as the dataset for the next weak learner. Note that classifier and weak learners are the same. 
-\citep{freund1996experiments} expressed that the fundamental inconvenience of Adaboost.M1 is that it does not manage the weak learners with an error of more than $1/2$, the expected error weak learner can get is $1 - 1/k$ (the $k$= number of class marks), however, when $k > 2$ it is not possible to get an error less than $1/2$. We can say that Adaboost.M1 is useful for binary classification problems, however, for multiple classifications we need to discover some new strategies. Adaboost.M2 overcome this problem by communicating with boosting algorithm and learning algorithm. We expect that weak learners provide more descriptive results rather than identifying a single result.
- \citep{freund1996experiments} gave the example of OCR(Optical character recognition) it may be hard to tell the character is 7 or 9 our weak learner may output \{7, 9\}. In Adaboost.M2 we interpret the $h_t$ in a binary form. The weak hypothesis can be concluded in the following way. If $h_t(x_i, y_i) = 1$ and $h_t(x_i, y)=0$, then $h_t$ is correctly classified that $x_i's$ label is $y_i's$ not $y$ on the other hand, if $h_t(x_i, y_i) = 0$ and $h_t(x_i, y)=1$ then $h_t$ has classified the result incorrectly and if $h_t(x_i, y)=h_t(x_i, y_i)$ then $h_t$ will be considered as a random guess. In Adaboost.M2 instead of dealing with error, there is a pseudo-loss which can be calculated using the expression shown in figure \ref{fig:pseudoLoss}. 
- \begin{figure}[h!]
- 	\centering
- 	\includegraphics{pseudoLoss.png}
- 	\caption{Adaboost.M2 Pseudo-Loss ~ \citep{freund1996experiments}}
- 	\label{fig:pseudoLoss}
- \end{figure}
- So the goal of the weak learner in Adaboost.M2 is to produce $h_t$ with less pseudo-loss. In Adaboost.M2 weak learners have pseudo-loss slightly better than ½ regardless of the number of classes so which means Adaboost.M2 can handle the multi-classification problem.
- 
- 
-\citep{freund1996experiments} address that boosting may be useful if the problem has two of the following properties. The first property is that training data need to have various degrees of hardness. Indirectly training the weak algorithms in such a way that they deal with a harder set of training data. The second property is that the weak learner is adaptable to adjustments within the learning dataset also known as “Unstable Behavior” of the training dataset.
+The working flow for the classification is well explained in the figure \ref{fig:c_flow}.
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=\textwidth]{c_flow.png}
+	\caption{Classification Flow}
+	\label{fig:c_flow}
+\end{figure}
+In classification section, train-test split is done just after the feature engineering where we create some new features like $missing\_term$, $remaining\_duration$ by using dates features in the dataset. Removing test set before the cleaning and pre-processing prevents data leakage, test data remains unexposed to the training model while doing cleaning and pre processing of the training data, cleaning and pre processing on test set is done separately. The steps involve in each phase of the classification is describe below.
+\subsection{Data Cleaning}
+Data cleaning is used to eliminate noise, inconsistencies, and inaccuracies from training data. This should allow for the development of a viable classification model using a more comprehensive and representative data set. Unclean data can sometimes influence the classification accuracy of a model in most classification methods. Data cleaning involves outlier handling and imputation of the missing values.
+\subsubsection{Outlier Detection}
 
-\subsection{Bagging}
-\citep{huang2009research} depicts that bagging is an ensemble approach that trains the number of weak learners, each with a distinct bootstrap sample. The bootstrap sample is received through a subsampling of training dataset with replacement. Training the weak learner with a distinctive sample set will increase the diversity of the ensemble learner which increases the accuracy of the ensemble learner. The algorithm taken from \citep{huang2009research} is shown in figure \ref{fig:bagging}. 
- \begin{figure}[h!]
- 	\centering
-	\includegraphics{bagging.png}
-	\caption{Bagging ~\citep{huang2009research}}
-	\label{fig:bagging}
-\end{figure}
-\citep{breiman1996bagging} explains bagging mathematically that the learning set of $\pounds$ includes data $\{(y_n, x_n), n=1….N\}$ where $x_n$ is the set of attribute and $y_n$ is the predicted class label or numerical value. Assume we have method $\phi (x, \pounds)$ that operates as a predictor. If $x$ is the input we can predict $y$ by using $\phi (x, \pounds)$ that’s the traditional machine learning approach. Now think we have $\{L_k\}$: the sequence of learning sets each includes N independent observations, so by using of $\{L_k\}$ we have to find a better predictor than the single weak predictor. If y is a numerical value, the average of $\phi (x, \pounds)$ is used instead of $\phi (x, \pounds)$, and if it is a class label, a voting technique among weak learners is used. This average and vote casting approach is referred to as aggregation. Distribution of learning set $\pounds$ over the weak learners is referred to as bootstrapping. Breman called this entire method “Bootstrap aggregation” and use the acronym bagging. Like boosting bagging is also adaptive to the unexpected adjustments that may arise in learning $\pounds$. \citep{breiman1996bagging} performs some experiments in which he examines the error rates of different datasets calculated using 10-fold cross validation and bootstrap sampling, he determined that error rates with bootstrap sampling (Bagging) are improved as compare to 10-fold cross-validation. He executed bagging classification and bagging regression in both the scenarios bagging had improved error rates. Figure \ref{fig:baggingResults} taken from \citep{breiman1996bagging} indicates the results of the experiments.
- \begin{figure}[h!]
- 	\centering
-	\includegraphics{baggingClassification.png}
-	\includegraphics{baggingRegression.png}
-	\caption{\citep{breiman1996bagging} Classification and Regression Results}
-	\label{fig:baggingResults}
-\end{figure}
+In a dataset, an outlier is a value that is abnormally far off from other values. In some ways, this definition delegated the decision of what is abnormal to the analyst. Outliers can be detected or dealt with using a variety of methods. Outlier detection approaches must be chosen based on the dataset. If a dataset has too many outliers, we must place those observations under distributions to see what they represent. Another method is to use algorithms to detect outliers and delete them from the dataset. To make things simpler in this problem Isoloation forest algorithm is used which is outlier detection algorithm to detect abnormal points and than those points were removed from the dataset to make dataset cleaner. The result of isolation forest is that there are more than 6000 outliers in the dataset which should be remove from the dataset. To make things easier in our case, the Isolation forest technique is utilised, which is an outlier identification technique that detects anomalous points and then removes those points from the dataset to clean it up. The  result of the isolation forest is that there are more than 6000 outliers in the dataset that need to be removed.
 
-\subsection{Stacking}
-The idea well explained in \citep{zhou2012ensemble} is that stacking is a manner in which a combining learner called the second-level learner is taught to integrate the outcomes of the individual learners called the first-level learner. The idea is to use training data to train the first-level learners and then create a new dataset for the second-level learners. The output of the first-level learner along with the actual class labels is the input of the second-level learner. Stack ensembles are specifically heterogeneous because the first-level learners are trained via a distinctive set of algorithms, however, they might be homogeneous. Figure \ref{fig:stacking} from \citep{zhou2012ensemble} shows the pseudo-code for the stacking. 
- \begin{figure}[h!]
- 	\centering
-	\includegraphics{stacking.png}
-	\caption{Stacking Pseudo-Code ~\citep{zhou2012ensemble}}
-	\label{fig:stacking}
-\end{figure}
-One important factor raised by \citep{zhou2012ensemble} is that if the same data used for extracting the dataset for the second-level learner that turned into used for the training of the first-level learner then there might be the chance of overfitting so it is important to keep data for extracting new datasets for second-level learners separated from training data. Cross-validation is often encouraged. \citep{zhou2012ensemble} said assume D: Training dataset cut up into randomly k equal parts $D_1,….., D_k$ and $D_j or D(-j) = D / D(j)$ to be the testing and training dataset for the $j^{th}$ fold. T is the set of learning algorithms, $h_t(-j)$ is the learner of $t^{th}$ learner algorithm on $D(-j)$. For each $x_i$ (test set in the $j^{th}$ fold) $z_it$ is the output of the learner $h_t(-j)$ on $x_i$ so after all the $j^{th}$ iterations the brand new dataset from T learners is as follows: $D' = \{(z_i1,....,z_iT), y_i\}^{m}_{i=1}$.
+\subsubsection{Imputation}
+Imputation is another important step in data cleaning because if there are missing values in the dataset than if we try to create a model with missing values, most machine learning algorithms gives an error. As a result, you'll need to pick one of the imputation tactics. There are many techniques for the imputation of missing values in the dataset such as dropping the rows, imputing with nearest values, imputing with up and down values or imputing with mean value. For simplicity in our case Mean-imputation is used, because imputing with mean preserves the mean of that particular feature, the estimate of the mean remains unbiased. There are benefits and disadvantages of mean imputation that are not in the scope of this project.
 
-The above dataset is then handed to the second-level learner and final $h'$ can be acquired as: $( z_1 , . . . , z_T )$
+\subsection{Data Transformation}
+Data transformation is the process of taking raw data, normalising it, balancing it, and transforming it into data that can be put together for analysis. Although dimensionality reduction is a part of data transformation, it is treated as a separate phase in this report since a comparison research was undertaken to obtain more accurate findings with dimensionality reduction. Normalization and balancing of the data are the two steps which were performed in transformation phase which are describe below.
+\subsubsection{Normalization}
+Normalization is a data transformation method that is regularly utilized in machine learning. Normalization is the way toward changing over the upsides of numeric columns in a dataset to a comparable scale without influencing the ranges of values. Neural Network also uses normalization to make data normalize which reduces computational time. Many machine learning algorithms, such as support vector machines and k means, are sensitive to normalization, although many others algorithm may function without it. Also because dimensionality reduction techniques like Principle Component Analysis (PCA) are sensitive to normalization, we must do normalization before dimensionality reduction.
+
+\subsubsection{Data Balancing}
+Imbalanced data occurs when the amount of observations for all of the classes in a classification dataset is not equal. Many machine learning classifiers struggle with unbalanced training datasets because they are sensitive to the ratios of various classes. As a result, these algorithms prefer the class with the highest set of observations, which might lead to inaccurate results. This can be especially problematic when we are looking for the rare class identification since many algorithms are unable to find sufficient data for learning. We can delete entries from the majority class to balance the data, but this may result in the loss of some crucial information; another option is to add duplicate values, which is also inefficient. For our study SMOTE technique is used for balancing the data, SMOTE creates new records rather than duplicating the records from the dataset which is very good for highly imbalanced data.
 
 
-\section{Issues related to ensemble learning}
-A lot of research was performed on ensemble learning in the past still, there are a few problems related to ensemble learning that needs consideration. \citep{wang2008some} said that among all the issues, factors that effecting the accuracy of an ensemble is the important one because everyone is concern about the accurate outcomes. As in keeping with \citep{wang2008some}, the factors that outcomes the accuracy of the ensemble are D: diversity among member models, acc(mi): the accuracy of the individual model, N: the number of member models, and S: decision-making strategy. These elements can be denoted as:
-$acc(V) = f ( acc(m_i) \forall_i = 1toN,D,S,N) ~\citep{wang2008some}$.
-According to \citep{wang2008some} while analyzing unique single factors, other factors cannot be sidelined because these factors are exceedingly correlated with each other. The focus of the \citep{wang2008some} is the experiment that was performed on different sets of data to explain the brief concept of how the above factors are related to each other and the way they impact the accuracy of the ensemble. Figure \ref{fig:issues} indicates the test results of \citep{wang2008some}. 
- \begin{figure}[h!]
- 	\centering
-	\includegraphics{issues.png}
-	\caption{Factors effecting the accuracy ~\citep{wang2008some}}
-	\label{fig:issues}
-\end{figure}
-Figure \ref{fig:issues} depicts that there may be nearly no diversity when the number of models is very fewer (N$\textless$3), after that when the number of model increases diversity also increases. After certain limit diversity still increases, but at a very low rate. The increase in diversity will lead to an increase in ensemble accuracy.
-From figure \ref{fig:issues} it can be seen that ensemble accuracy stays consistent when using the average decision-making strategy which depicts that if the average strategy is used to get ensemble accuracy diversity does not create an effect on the results. On the opposite hand, while the vote casting strategy is used the continuous increase in ensemble accuracy can be seen as diversity of the ensemble increases. The closing ten models used in the ensemble are selection trees that play very awful individually, but after adding to the ensemble, increases in diversity occurs consequently accuracy of the ensemble will increase which concludes that much less accurate individual models will increase the diversity of the ensemble which ultimately increases the accuracy of the ensemble. From figure \ref{fig:issues} it could be depicted that after the increase in the number of models the diversity of an ensemble increases which indirectly leads to the increase in accuracy of an ensemble. In figure \ref{fig:issues} a thrilling factor is discovered that there is up-down instability may be visible. This is due to the fact when even number of models are located the win-threshold for the voting strategy increases, but when the number of the models will increase this difference becomes smaller and can be negligible. This point concludes that why the odd number of models ought to be selected because if the win-threshold value is lower ensemble provides more correct results in voting strategy.
+\subsection{Dimensionality Reduction}
+
+
+\subsection{Training}
+
+\subsection{Validation}
+
+\subsection{Testing}
+\section{Clustering}
+
 
 \section{Conclusion}
-This report has covered a few foundations of ensemble which were set in 1990's, after knowing some foundation this report depicted the ensemble learning in detail i-e combining the distinctive individual model with diverse data so the precise outcomes of the ensemble can be accomplished. Reasons of ensembles performing better compared to the individual model are additionally notice in the report among every one of the reasons the most significant is that ensemble learning because of its diversity eliminate overfitting from the model which prompts low variance and low bias which indirectly improve results. Some popular ensemble learning techniques are likewise discussed in this report are bagging, boosting, stacking. Bagging was presented in \citep{breiman1996bagging} which dependent on the idea of bootstrapping and aggregation, detailed working of bagging is well explained in this report. The second technique which examined is boosting which depends on the idea of lifting the weights of incorrect classified results so that they can be selected as a dataset for the next learner, detail along with different versions of boosting is discussed in the report. The last technique for ensemble is stacking which uses a learning algorithm for combining results as opposed to casting a vote and averaging considered as the second-level learner and individual learners that produces results called the first-level learner. In the absolute last a test result has been analyzed which shows what various factors can be meant for the precision of the ensemble, diversity assumes a significant part as the diversity of an ensemble increases the accuracy of an ensemble increases. This report covers the total image of ensemble learning, strategies used for ensemble, and factors that can impact the exactness of the ensemble.
+
 
 \singlespacing
 
