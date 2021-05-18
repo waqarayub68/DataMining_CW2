@@ -24,21 +24,20 @@
 Classification and clustering are difficult tasks that can be used to predict results from various datasets. These are the tasks that make up the majority of data science work. On the lending club dataset, this study uses various KDD actions for classification and clustering, which enable the related institute to identifying whether a loan is potentially a bad loan or a good loan. To obtain reliable results, various machine learning algorithms for classification and clustering were applied to the dataset.
 
 \end{abstract}
-\doublespacing
 
-\section{Introduction}
-This report covers two task, first task is to use lending club dataset and predict the loan status of the accounts, as we already know the loan status so this can be done by using different classification algorithms and then we can find the accuracy of our predictions by comparing the predicted results with the actual loan status. Second task is to use clustering algorithms to divide the data points into number of groups, each group represents the similar type of data points in our case loan status. Both tasks consists on Knowledge Discovery of Databases (KDD) steps, each step of KDD has a separate action on dataset which helps in getting more accurate results. In this study various techniques was used on dataset before making predictions such as removing abnormal data points known as Outliers, dealing with missing values, data balancing, dimensionality reduction which are the part of KDD process. Classification and clustering both involves these steps for accurate predictions, these steps are known as Cleaning and Pre-processing of a data. After getting cleaned and pre-processed data, for classification various algorithms were applied to get predictions and similarly for clustering predictions different clustering algorithms were applied to get accurate clusters. Overall both classification and clustering involve cleaning, pre-processing, modeling, evaluation, each step for both clustering and classification will be discussed in this report.
+
+\section{Executive Summary}
+This study covers two task, first task is to use lending club dataset and predict the loan status of the accounts, as we already know the loan status so this can be done by using different classification algorithms and then we can find the accuracy of our predictions by comparing the predicted results with the actual loan status. Second task is to use clustering algorithms to divide the data points into number of groups, each group represents the similar type of data points in our case loan status. For classification, different pre processing techniques like feature construction, feature transformation, imputation, outlier detection etc were applied on the data to make data clean for model training, different machine learning algorithms are used to create models like Adaboost, Decision Tree, Random Forest tree. These models were trained with the best possible paramters which were obtain from GridSearch. After model training some testing and evaluation was performed on the data. For clustering same pre processing techniques were applied but feature reduction is done by some projection methods like PCA, FAMD etc. For clustering I applied K-MEANS with projected data and also applied K-Prototype (a version of K-MEANS for handling the categorical features). Both tasks consists on Knowledge Discovery of Databases (KDD) steps, each step of KDD has a separate action on dataset which helps in getting more accurate results. 
 
 \section{Data / Feature Summary} 
-In the lending club data we have 108 features, having "14" categorical features,  $issue\_d$, $last\_pymnt\_d$, $next\_pymnt\_d$ features are dates column which will be converted to some meaningful information like $missing\_term$, $missing\_term$.
-Table \ref{table:1} shows the categorical features along with the unique values. Remaining columns are continuous numeric values. Figure \ref{fig:MissingValues} will represent that there are 17 columns which has more than 60 percent null values in the data so we should remove those columns.
+In the lending club data we have 108 features and 77159 records. Out of 108 we have 17 features which has more than 60 percent of null values, which will be removed in the pre processing stage. Figure \ref{fig:MissingValues} represents that there are 17 columns which has more than 60 percent null values in the data. Except these we having "14" categorical features which needs encoding and we also have  $issue\_d$, $last\_pymnt\_d$, $next\_pymnt\_d$ features which are dates column which will be converted to some meaningful information like $missing\_term$, $remaining\_term$ shown in figure \ref{fig:dates}. Features like $id$, $emp\_title$ has over 25000 unique values so it is better to remove those columns from data. $int\_rate$, $revol\_util$ and $term$ is also the numerical values but after loading the data these features appears as categorical so I converted those features by removing $\%$ symbol from the end which will convert those into continuous numeric values. Table \ref{table:1} shows the categorical features along with the unique values. Remaining columns are continuous numeric values which does not need any encoding or filtering.
 \begin{figure}[h!]
 	\centering
 	\includegraphics{MissingValues.png}
 	\caption{Features having more than 6 percent missing values}
 	\label{fig:MissingValues}
 \end{figure}
-Features like $id$, $emp\_title$ has over 25000 unique values so it is better to remove those columns from data. $int\_rate$, $revol\_util$ and $term$ is also the numerical values but after loading the data these features appears as categorical so I converted those features by removing $\%$ symbol from the end which will convert those into continuous numeric values. 
+ 
 \begin{table}[h!]
 	\centering
 	\begin{tabular}{ |p{3cm}|p{3cm}|p{3cm}|  }
@@ -47,18 +46,18 @@ Features like $id$, $emp\_title$ has over 25000 unique values so it is better to
 
 		\hline
 		$emp\_title$ & 28185 \\
+		$application\_type$ & 2 \\
 		$home\_ownership$ & 5 \\
 		$loan\_status$ & 7 \\
 		$int\_rate$ & 129 \\
 		$term$ & 2 \\
 		$grade$ & 7 \\
 		$earliest\_cr\_line$ & 622 \\
-		$issue\_d$ & 16 \\
-		$last\_pymnt\_d	$ & 28 \\
-		$next\_pymnt\_d	$ & 9 \\
 		$verification\_status$ & 3 \\
 		$pymnt\_plan$ & 1 \\
 		$purpose$ & 13 \\
+		$hardship\_flag$ & 2\\
+		$initial\_list\_status$ & 2\\
 		$revol\_util$ & 1074 \\
 		\hline
 	\end{tabular}
@@ -73,6 +72,7 @@ Features like $id$, $emp\_title$ has over 25000 unique values so it is better to
 	\caption{Transformation of Dates Columns}
 	\label{fig:dates}
 \end{figure}
+
 
 \section{Data Preprocessing}
 \subsection{Feature Engineering/Removal}
@@ -208,32 +208,73 @@ Table \ref{table:correlation_results} and table \ref{table:pca_results} shows th
 \end{table}
 
 \section{Unsupervised Learning (Clustering)}
-For the unsupervised learning I took the entire data, pre processed that data with similar techniques as I did in classification but feature reduction is done by some projection methods like PCA, FAMD. Like clustering I did some comparative study tried to predict clusters under different scenarios. I use K-MEANS with some dimensionality reduction methods and K-Prototype which is a advance version of K-MEANS.
+For the unsupervised learning I took the entire data, pre processed that data with similar techniques as I did in classification but feature reduction is done by some projection methods like PCA, FAMD. Like classification I did some comparative study tried to predict clusters under different scenarios. I use K-MEANS with some dimensionality reduction methods and K-Prototype which is a advance version of K-MEANS.
 \subsection{Issue with data for clustering}
-As our dataset contains some categorical information so applying K-MEANS directly on the data will not work because K-MEANS work by calculating the distance so K-MEAN consider our encoded categorical features as continuous numeric value but in reality these encoded features are discrete values. To overcome this problem I use projection methods like PCA, FAMD (Factor Analysis of mixed data types) for dimensionality reduction to make experiment comparative. As we are aware of PCA, but FAMD is rarely used it is useful when you have both categorical features and numeric features in the data. It takes the data in raw form without encoding and produce the reduced dimensioned data. Except K-MEANS with projection methods I also applied K-Prototype which is latest version of KMEANS which deal with categorical features on its own, it calculates the distance differently on categorical features as compare to numerical feature.
+As our dataset contains some categorical information so applying K-MEANS directly on the data will not work because K-MEANS work by calculating the distance so K-MEAN consider our encoded categorical features as continuous numeric value but in reality these encoded features are discrete values. To overcome this problem I use projection methods like PCA, FAMD for dimensionality reduction. Factor analysis of mixed data types (FAMD) excepts data with continuous numeric values and categorical values and produce the reduced dimensioned data. Except K-MEANS with projection methods I also applied K-Prototype which is latest version of KMEANS which deal with categorical features on its own, it calculates the distance differently on categorical features as compare to numerical feature.
 
 
-\subsection{K-MEANS with Elbow Scoring}
-Elbow methods helps to calculate the number of optimal number of the cluster for clustering algorithm. I applied elbow method for K-MEANS two times: first for the FAMD reduced data, second time for the PCA data. Figure \ref{fig:elbow_result} shows optimal number of clusters for both the data.
+\subsection{Elbow Scoring and Silhouette Scoring}
+Elbow methods helps to calculate the optimal number of clusters for clustering algorithm. I applied elbow method for K-MEANS after reducing the data dimensionality with PCA and FAMD. After determining the number of optimal cluster we have to check the Silhouette score which is a matrix used to check the goodness of the clusters. Figure \ref {fig:scores} shows silhouette scores with clusters from 2 to 5 for PCA and FAMD reduced data
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics{pca_elbow.png}
+%	\caption{Elbow method estimation for PCA reduced data}
+%	\label{fig:elbow_result}
+%\end{figure}
+%\begin{figure}[h!]
+%	\centering
+%	\subfloat[\centering Elbow method estimation for FAMD reduced data %]{{\includegraphics[width=7cm]{famd_elbow} }}%
+%	\qquad
+%	\subfloat[\centering Elbow method estimation for PCA reduced %data]{{\includegraphics[width=7cm]{pca_elbow} }}%
+%	\caption{Elbow method estimation for FAMD and PCA Data}%
+%	\label{fig:elbow_result}%
+%\end{figure}
 
+.
+%\begin{figure}[h!]
+%	\centering
+%	\includegraphics{pca_score.png}
+%	\caption{Silhouette Scores for the PCA reduced data}
+%	\label{fig:scores}
+%\end{figure}
 \begin{figure}[h!]
 	\centering
-	\subfloat[\centering Elbow method estimation for FAMD reduced data ]{{\includegraphics[width=7cm]{famd_elbow} }}%
-	\qquad
-	\subfloat[\centering Elbow method estimation for PCA reduced data]{{\includegraphics[width=7cm]{pca_elbow} }}%
-	\caption{Elbow method estimation for FAMD and PCA Data}%
-	\label{fig:elbow_result}%
-\end{figure}
-
-After determining the number of optimal number of cluster we have to check the Silhouette score which is matrix used to check the goodness of the clusters. I draw the line graph which shows silhouette scores with clusters from 1 to 5 for FAMD reduced data and PCA reduced data as well.
-\begin{figure}[h!]
-	\centering
-	\subfloat[\centering Silhouette Scores for the FAMD reduced data ]{{\includegraphics[width=7cm]{pca_score} }}%
+	\subfloat[\centering Silhouette Scores for the FAMD reduced data ]{{\includegraphics[width=7cm]{famd_scores} }}%
 	\qquad
 	\subfloat[\centering  Silhouette Scores for the PCA reduced data]{{\includegraphics[width=7cm]{pca_score} }}%
 	\caption{Silhouette scores for the FAMD and PCA reduced data}%
 	\label{fig:scores}%
 \end{figure}
+
+After observing figure \ref{fig:scores} it can be seen that the best optimal silhouette score is 0.14 for PCA reduced data with 2 clusters which is highest in both graphs. So for good predictions it is better to apply K-MEANS with 2 clusters on PCA reduced data.
+
+\subsection{K-MEANS}
+After getting the data which is transformed by PCA we has no discrete values in the data and optimal number of clusters from elbow method and silhouette score we can apply K-MEANS. I applied K-MEANS on PCA reduced data with 2 clusters to get predictions, the results of the K-MEAN with 2 clusters are shown in figure \ref{fig:kmeans_result_2d}. By looking at figure \ref{fig:kmeans_result_2d} it can clearly seen that our data has a definite pattern. 
+
+
+\subsection{Experiment with other algorithm}
+K-Prototypes is a lesser-known versoin of K-MEANS that has the benefit of working with a variety of data types. It uses Euclidean distance (like K-means) to assess distance between numerical features, but it also uses the number of matching categories to evaluate distance between categorical data. I applied K-Prototype to the original data which has categorical and numerical values in it. As it has categorical values so scoring for the K-Protoype is difficult to get, it requires some mathematics, which is not in the scope of this study. I applied K-Prototype just to visualize that whether our data shows some pattern with algorithms other than K-MEANS. The experiment results with K-Prototype is shown in the figure \ref{fig:k_pro_re}
+\begin{figure}[h!]
+	\centering
+	\subfloat[\centering PCA reduced data K-MEANS clusters in 3d Scatter plot]{{\includegraphics[width=7cm]{pca_3d} }}%
+	\qquad
+	\subfloat[\centering PCA reduced data K-MEANS clusters in 2d Scatter plot]{{\includegraphics[width=7cm]{pca_2d} }}%
+	
+	\caption{K-MEANS Prediction PCA Data}%
+	\label{fig:kmeans_result_2d}%
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\subfloat[\centering PCA reduced data K-MEANS clusters in 3d Scatter plot]{{\includegraphics[width=7cm]{pca_3d} }}%
+	\qquad
+	\subfloat[\centering PCA reduced data K-MEANS clusters in 2d Scatter plot]{{\includegraphics[width=7cm]{pca_2d} }}%
+	
+	\caption{K-Prototypes Predictions}%
+	\label{fig:k_pro_re}%
+\end{figure}
+
+
 \section{Conclusion}
 
 
