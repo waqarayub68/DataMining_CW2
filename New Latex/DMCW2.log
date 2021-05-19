@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.15)  18 MAY 2021 15:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (MiKTeX 21.3) (preloaded format=pdflatex 2021.5.15)  19 MAY 2021 10:12
 entering extended mode
 **./DMCW2.tex
 (DMCW2.tex
@@ -243,63 +243,41 @@ Package pdftex.def Info: MissingValues.png  used on input line 36.
 [1
 
 {C:/Users/UEA/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Overfull \hbox (1.6633pt too wide) in paragraph at lines 50--50
-[]$\OML/cmm/m/it/12 home[]ownership$| 
- []
-
-
-Overfull \hbox (15.68907pt too wide) in paragraph at lines 56--56
-[]$\OML/cmm/m/it/12 verification[]status$| 
- []
-
-
-Overfull \hbox (6.2763pt too wide) in paragraph at lines 60--60
-[]$\OML/cmm/m/it/12 initial[]list[]status$| 
- []
-
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<dates.png, id=12, 378.66469pt x 89.58469pt>
+<dates.png, id=12, 370.38374pt x 71.51718pt>
 File: dates.png Graphic file (type png)
 <use dates.png>
 Package pdftex.def Info: dates.png  used on input line 71.
-(pdftex.def)             Requested size: 378.66376pt x 89.58446pt.
+(pdftex.def)             Requested size: 370.38283pt x 71.517pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [2 <./MissingValues.png>] [3 <./dates.png>] [4]
-
-LaTeX Warning: Reference `fig:imbalance' on page 5 undefined on input line 100.
-
-
 <classes.png, id=25, 172.39406pt x 112.92188pt>
 File: classes.png Graphic file (type png)
 <use classes.png>
 Package pdftex.def Info: classes.png  used on input line 103.
 (pdftex.def)             Requested size: 172.39363pt x 112.92159pt.
 
-Overfull \hbox (31.90533pt too wide) in paragraph at lines 100--107
-\OT1/cmr/m/n/12 In the ac-tual data we have seven dif-fer-ent classes named as 
-$\OML/cmm/m/it/12 fully[]paid$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 current$\OT1/
-cmr/m/n/12 , $\OML/cmm/m/it/12 Late\OT1/cmr/m/n/12 (15 \OML/cmm/m/it/12 to \OT1
-/cmr/m/n/12 30 \OML/cmm/m/it/12 days\OT1/cmr/m/n/12 )$,
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 124--124
+[]\OT1/cmr/m/n/12 Correlation
  []
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[5] [6 <./classes.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 124--124
-[]\OT1/cmr/m/n/12 Correlation
- []
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 144--144
 []\OT1/cmr/m/n/12 Correlation
  []
 
-
+[6 <./classes.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 163--163
 []\OT1/cmr/m/n/12 Target
  []
@@ -330,56 +308,70 @@ File: pca_score.png Graphic file (type png)
 <use pca_score.png>
 Package pdftex.def Info: pca_score.png  used on input line 244.
 (pdftex.def)             Requested size: 199.16928pt x 148.38538pt.
+<pca_3d.png, id=42, 243.15843pt x 207.02344pt>
+File: pca_3d.png Graphic file (type png)
+<use pca_3d.png>
+Package pdftex.def Info: pca_3d.png  used on input line 255.
+(pdftex.def)             Requested size: 199.16928pt x 169.57077pt.
+<pca_2d.png, id=43, 294.34969pt x 194.97844pt>
+File: pca_2d.png Graphic file (type png)
+<use pca_2d.png>
+Package pdftex.def Info: pca_2d.png  used on input line 257.
+(pdftex.def)             Requested size: 199.16928pt x 131.93202pt.
  [9 <./famd_scores.png> <./pca_score.png>]
-<pca_3d.png, id=47, 243.15843pt x 207.02344pt>
-File: pca_3d.png Graphic file (type png)
-<use pca_3d.png>
-Package pdftex.def Info: pca_3d.png  used on input line 259.
-(pdftex.def)             Requested size: 199.16928pt x 169.57077pt.
-<pca_2d.png, id=48, 294.34969pt x 194.97844pt>
-File: pca_2d.png Graphic file (type png)
-<use pca_2d.png>
-Package pdftex.def Info: pca_2d.png  used on input line 261.
-(pdftex.def)             Requested size: 199.16928pt x 131.93202pt.
-File: pca_3d.png Graphic file (type png)
-<use pca_3d.png>
-Package pdftex.def Info: pca_3d.png  used on input line 269.
-(pdftex.def)             Requested size: 199.16928pt x 169.57077pt.
-File: pca_2d.png Graphic file (type png)
-<use pca_2d.png>
-Package pdftex.def Info: pca_2d.png  used on input line 271.
-(pdftex.def)             Requested size: 199.16928pt x 131.93202pt.
+<kp_3d.png, id=49, 205.5178pt x 173.14688pt>
+File: kp_3d.png Graphic file (type png)
+<use kp_3d.png>
+Package pdftex.def Info: kp_3d.png  used on input line 269.
+(pdftex.def)             Requested size: 199.16928pt x 167.79903pt.
+<kp_2d.png, id=50, 261.22594pt x 168.63pt>
+File: kp_2d.png Graphic file (type png)
+<use kp_2d.png>
+Package pdftex.def Info: kp_2d.png  used on input line 271.
+(pdftex.def)             Requested size: 199.16928pt x 128.57181pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-(DMCW2.bbl
+<kp_cost.png, id=51, 282.30469pt x 192.72pt>
+File: kp_cost.png Graphic file (type png)
+<use kp_cost.png>
+Package pdftex.def Info: kp_cost.png  used on input line 280.
+(pdftex.def)             Requested size: 282.30399pt x 192.71951pt.
 
-Package natbib Warning: Empty `thebibliography' environment on input line 3.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) [10 <./pca_3d.png> <./pca_2d.png>] [11] (DMCW2.aux)
+[10 <./pca_3d.png> <./pca_2d.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
+[]\OT1/cmr/m/n/12 Target
+ []
 
-LaTeX Warning: There were undefined references.
 
- ) 
+Underfull \hbox (badness 10000) in paragraph at lines 296--296
+[]\OT1/cmr/m/n/12 Total
+ []
+
+[11 <./kp_3d.png> <./kp_2d.png> <./kp_cost.png>] [12] (DMCW2.bbl) [13]
+(DMCW2.aux) ) 
 Here is how much of TeX's memory you used:
- 4375 strings out of 479173
- 70954 string characters out of 2855121
- 391484 words of memory out of 3000000
- 21961 multiletter control sequences out of 15000+600000
- 410331 words of font info for 51 fonts, out of 8000000 for 9000
+ 4428 strings out of 479173
+ 71720 string characters out of 2855121
+ 390817 words of memory out of 3000000
+ 22012 multiletter control sequences out of 15000+600000
+ 410678 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 69i,14n,79p,1453b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
-<C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfont
-s/cm/cmbx12.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr10.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/
-type1/public/amsfonts/cm/cmr12.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/
-fonts/type1/public/amsfonts/cm/cmr17.pfb>
-Output written on DMCW2.pdf (11 pages, 211980 bytes).
+ 69i,14n,79p,1616b,393s stack positions out of 5000i,500n,10000p,200000b,80000s
+<C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/type1/public/ams
+fonts/cm/cmbx10.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmbx12.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmmi12.pfb><C:/Users/UEA/AppData/Local/Programs/MiKTeX/f
+onts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/UEA/AppData/Local/Programs/Mi
+KTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/UEA/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/UEA/AppData/Local
+/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on DMCW2.pdf (13 pages, 296270 bytes).
 PDF statistics:
- 77 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

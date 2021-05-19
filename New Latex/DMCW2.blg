@@ -4,47 +4,47 @@ The top-level auxiliary file: DMCW2.aux
 Reallocating 'name_of_file' (item size: 1) to 5 items.
 The style file: agsm.bst
 Reallocating 'name_of_file' (item size: 1) to 9 items.
-I found no \citation commands---while reading file DMCW2.aux
 Database file #1: document.bib
-You've used 0 entries,
+Warning--I didn't find a database entry for "dimensionality1"
+You've used 7 entries,
             2909 wiz_defined-function locations,
-            638 strings with 4734 characters,
-and the built_in function-call counts, 32 in all, are:
-= -- 0
-> -- 0
-< -- 0
-+ -- 0
-- -- 0
-* -- 0
-:= -- 18
-add.period$ -- 0
-call.type$ -- 0
-change.case$ -- 0
-chr.to.int$ -- 0
-cite$ -- 0
-duplicate$ -- 0
-empty$ -- 1
-format.name$ -- 0
-if$ -- 1
+            692 strings with 6101 characters,
+and the built_in function-call counts, 27590 in all, are:
+= -- 4439
+> -- 385
+< -- 1
++ -- 2079
+- -- 115
+* -- 2362
+:= -- 5557
+add.period$ -- 7
+call.type$ -- 7
+change.case$ -- 97
+chr.to.int$ -- 7
+cite$ -- 7
+duplicate$ -- 130
+empty$ -- 266
+format.name$ -- 137
+if$ -- 4979
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 0
-newline$ -- 3
-num.names$ -- 0
-pop$ -- 0
+missing$ -- 8
+newline$ -- 25
+num.names$ -- 76
+pop$ -- 30
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 105
 quote$ -- 0
-skip$ -- 1
+skip$ -- 112
 stack$ -- 0
-substring$ -- 0
-swap$ -- 0
-text.length$ -- 0
+substring$ -- 6234
+swap$ -- 32
+text.length$ -- 99
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 0
+type$ -- 26
 warning$ -- 0
-while$ -- 0
+while$ -- 161
 width$ -- 0
-write$ -- 2
-(There was 1 error message)
+write$ -- 101
+(There was 1 warning)

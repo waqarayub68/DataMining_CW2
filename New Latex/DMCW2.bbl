@@ -1,3 +1,46 @@
 \begin{thebibliography}{xx}
 
+\harvarditem{Akay \harvardand\ Y{\"u}ksel}{2018}{kp01}
+Akay, {\"O}. \harvardand\ Y{\"u}ksel, G.  \harvardyearleft
+  2018\harvardyearright , `Clustering the mixed panel dataset using gower's
+  distance and k-prototypes algorithms', {\em Communications in
+  Statistics-Simulation and Computation} {\bf 47}(10),~3031--3041.
+
+\harvarditem[Ayesha et~al.]{Ayesha, Hanif \harvardand\
+  Talib}{2020}{dimensionality}
+Ayesha, S., Hanif, M.~K. \harvardand\ Talib, R.  \harvardyearleft
+  2020\harvardyearright , `Overview and comparative study of dimensionality
+  reduction techniques for high dimensional data', {\em Information Fusion}
+  {\bf 59},~44--58.
+
+\harvarditem{Boris~Iglewicz}{1993}{outlier}
+Boris~Iglewicz, D. C.~H.  \harvardyearleft 1993\harvardyearright , {\em How to
+  Detect and Handle Outliers}, ASQC Quality Press.
+
+\harvarditem[Feldman et~al.]{Feldman, Schmidt \harvardand\ Sohler}{2020}{DRK}
+Feldman, D., Schmidt, M. \harvardand\ Sohler, C.  \harvardyearleft
+  2020\harvardyearright , `Turning big data into tiny data: Constant-size
+  coresets for k-means, pca, and projective clustering', {\em {SIAM} J.
+  Comput.} {\bf 49}(3),~601--657.
+\newline\harvardurl{https://doi.org/10.1137/18M1209854}
+
+\harvarditem[Freund et~al.]{Freund, Schapire et~al.}{1996}{adaboost}
+Freund, Y., Schapire, R.~E. et~al.  \harvardyearleft 1996\harvardyearright ,
+  Experiments with a new boosting algorithm, {\em in} `icml', Vol.~96,
+  Citeseer, pp.~148--156.
+
+\harvarditem{Huang}{1998}{kp02}
+Huang, Z.  \harvardyearleft 1998\harvardyearright , `Extensions to the k-means
+  algorithm for clustering large data sets with categorical values', {\em Data
+  mining and knowledge discovery} {\bf 2}(3),~283--304.
+
+\harvarditem[Jeatrakul et~al.]{Jeatrakul, Wong \harvardand\
+  Fung}{2010}{balancing}
+Jeatrakul, P., Wong, K.~W. \harvardand\ Fung, C.~C.  \harvardyearleft
+  2010\harvardyearright , Classification of imbalanced data by combining the
+  complementary neural network and smote algorithm, {\em in} K.~W. Wong,
+  B.~S.~U. Mendis \harvardand\ A.~Bouzerdoum, eds, `Neural Information
+  Processing. Models and Applications', Springer Berlin Heidelberg, Berlin,
+  Heidelberg, pp.~152--159.
+
 \end{thebibliography}
